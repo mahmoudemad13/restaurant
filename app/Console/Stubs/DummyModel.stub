@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Models\Dummies;
+
+use Illuminate\Database\Eloquent\Model;
+use App\Traits\HasRoute;
+
+class model_name extends Model
+{
+    use HasRoute;
+
+    protected $fillable = [''];
+
+    protected $routeName = 'admin.plural_lower_case';
+}
+
+

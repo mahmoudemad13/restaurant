@@ -1,0 +1,16 @@
+<?php
+
+Breadcrumbs::for('admin.plural_lower_case.index', function ($trail) {
+    $trail->push(__('labels.backend.plural_lower_case.management'), route('admin.plural_lower_case.index'));
+});
+
+Breadcrumbs::for('admin.plural_lower_case.create', function ($trail) {
+    $trail->parent('admin.plural_lower_case.index');
+    $trail->push(__('labels.backend.plural_lower_case.create'), route('admin.plural_lower_case.index'));
+});
+
+
+Breadcrumbs::for('admin.plural_lower_case.edit', function ($trail) {
+    $trail->parent('admin.plural_lower_case.index');
+    $trail->push(__('labels.backend.plural_lower_case.edit'), route('admin.plural_lower_case.index'));
+});
