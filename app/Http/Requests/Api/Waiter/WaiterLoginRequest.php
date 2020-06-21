@@ -28,8 +28,8 @@ class WaiterLoginRequest extends FormRequest
             'username' => 'required',
             'password' => 'required',
             'store_id' => 'required|exists:stores,id',
-            'token' => 'required',
-            'device' => 'required|in:android,ios',
+            // 'token' => 'required',
+            // 'device' => 'required|in:android,ios',
         ];
     }
 
