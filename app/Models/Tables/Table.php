@@ -9,7 +9,7 @@ class Table extends Model
 {
     use HasRoute;
 
-    protected $fillable = [''];
+    protected $fillable = ['available'];
 
     protected $routeName = 'admin.tables';
 }
