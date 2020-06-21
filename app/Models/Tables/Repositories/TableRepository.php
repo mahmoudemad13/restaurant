@@ -32,9 +32,9 @@ class TableRepository extends BaseRepository
     public function apiOpen($store_id,$table_id)
     {
         $table = $this->model->where('store_id',$store_id)->where('id',$table_id)->first();
-        if($table->available == 0){
+        if($table->available == 1){
            $table->update([
-                'available' => 1
+                'available' => 0
             ]);
             return jsonResponse(['message' => 'table is opened successfully!']);
         }
@@ -44,9 +44,9 @@ class TableRepository extends BaseRepository
     public function apiClose($store_id,$table_id)
     {
         $table = $this->model->where('store_id',$store_id)->where('id',$table_id)->first();
-        if($table->available == 1){
+        if($table->available == 0){
             $table->update([
-                'available' => 0
+                'available' => 1
             ]);
             return jsonResponse(['message' => 'table is closed successfully!']);
         }

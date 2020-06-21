@@ -1,11 +1,11 @@
 <?php
 Route::group(['prefix' => 'v1/', 'namespace' => 'Api'], function () {
 
-    Route::post('waiters/login','Waiter\WaiterController@login');
+    Route::post('waiters/login','Waiter\WaiterController@login'); //done integration
 
     Route::group(['middleware'=> "waiter"],function(){
 
-        Route::get("{store_id}/tables","Table\TableController@get");
+        Route::get("{store_id}/tables","Table\TableController@get"); //done integration
         Route::put("{store_id}/tables/{table_id}/open","Table\TableController@open");
         Route::get("{store_id}/tables/search","Table\TableController@search");
         Route::put("{store_id}/tables/{table_id}/close","Table\TableController@close");
